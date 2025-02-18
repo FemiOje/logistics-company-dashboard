@@ -1,0 +1,34 @@
+.header {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.theme-toggle {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--text-secondary);
+    margin-left: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
