@@ -1,0 +1,114 @@
+.shipments-list {
+    padding: 1rem;
+  }
+  
+  .shipments-list h1 {
+    color: var(--primary-text);
+    margin-bottom: 2rem;
+  }
+  
+  .shipments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .shipment-card {
+    background-color: var(--card-bg);
+    color: var(--primary-text);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .shipment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px var(--shadow-color);
+  }
+  
+  .shipment-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .shipment-card p {
+    margin: 0.5rem 0;
+    color: var(--secondary-text);
+  }
+  
+  .shipment-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .shipment-card a:hover {
+    background-color: var(--button-hover);
+  }
+  
+  /* Status indicators */
+  [data-status="In Transit"] {
+    color: var(--status-in-transit-text);
+    background-color: var(--status-in-transit-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 0.875rem;
+  }
+  
+  [data-status="Delayed"] {
+    color: var(--status-delayed-text);
+    background-color: var(--status-delayed-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 0.875rem;
+  }
+  
+  [data-status="Delivered"] {
+    color: var(--status-delivered-text);
+    background-color: var(--status-delivered-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 0.875rem;
+  }
+
+  .shipment-card .button-text{
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .shipments-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 0;
+    }
+  
+    .shipment-card {
+      padding: 1rem;
+      min-height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shipments-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .shipment-card {
+      min-height: auto;
+    }
+  }

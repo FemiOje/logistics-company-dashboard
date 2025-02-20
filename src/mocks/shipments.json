@@ -1,0 +1,96 @@
+{
+    "shipments": [
+      {
+        "shipmentId": "SHIP-12345",
+        "status": "In Transit",
+        "origin": {
+          "name": "Warehouse A",
+          "address": "123 Main St, Chicago, IL",
+          "timestamp": "2024-02-15T08:00:00Z"
+        },
+        "destination": {
+          "name": "Retail Center B",
+          "address": "456 Oak Ave, Dallas, TX",
+          "estimatedDelivery": "2024-02-17T18:00:00Z"
+        },
+        "currentLocation": {
+          "latitude": 39.7392,
+          "longitude": -104.9903,
+          "city": "Denver",
+          "state": "CO"
+        },
+        "carrier": "UPS",
+        "weight": 45.2,
+        "value": 12500,
+        "lastUpdated": "2024-02-16T14:30:00Z"
+      },
+      {
+        "shipmentId": "SHIP-67890",
+        "status": "Delayed",
+        "origin": {
+          "name": "Factory C",
+          "address": "789 Industrial Park, Detroit, MI",
+          "timestamp": "2024-02-14T10:00:00Z"
+        },
+        "destination": {
+          "name": "Port D",
+          "address": "321 Harbor Way, Miami, FL",
+          "estimatedDelivery": "2024-02-18T12:00:00Z"
+        },
+        "currentLocation": {
+          "latitude": 35.2271,
+          "longitude": -80.8431,
+          "city": "Charlotte",
+          "state": "NC"
+        },
+        "carrier": "FedEx",
+        "weight": 82.1,
+        "value": 23400,
+        "lastUpdated": "2024-02-16T15:45:00Z"
+      },
+      {
+        "shipmentId": "SHIP-11223",
+        "status": "Delivered",
+        "origin": {
+          "name": "Warehouse B",
+          "address": "654 Elm St, Phoenix, AZ",
+          "timestamp": "2024-02-13T07:30:00Z"
+        },
+        "destination": {
+          "name": "Store Front",
+          "address": "987 Pine Rd, Seattle, WA",
+          "estimatedDelivery": "2024-02-15T17:00:00Z"
+        },
+        "currentLocation": {
+          "latitude": 47.6062,
+          "longitude": -122.3321,
+          "city": "Seattle",
+          "state": "WA"
+        },
+        "carrier": "DHL",
+        "weight": 23.8,
+        "value": 7800,
+        "lastUpdated": "2024-02-15T16:15:00Z"
+      }
+    ],
+    "trackingHistory": [
+    {
+      "timestamp": "2024-02-15T08:00:00Z",
+      "location": {
+        "city": "Chicago",
+        "state": "IL",
+        "coordinates": [41.8781, -87.6298]
+      },
+      "status": "Departed Origin"
+    },
+    {
+      "timestamp": "2024-02-16T12:00:00Z",
+      "location": {
+        "city": "Denver",
+        "state": "CO",
+        "coordinates": [39.7392, -104.9903]
+      },
+      "status": "In Transit"
+    }
+  ]
+  }

@@ -1,0 +1,124 @@
+/* src/styles/ShipmentDetails.css */
+
+.shipment-details {
+    padding: 2rem;
+    color: var(--primary-text);
+  }
+  
+  .shipment-details h2 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .status-card {
+    background-color: var(--status-bg);
+    border: 2px solid var(--status-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .status-card h3 {
+    color: var(--status-text);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .status-card p {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .details-grid > div {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .details-grid > div:hover {
+    transform: translateY(-2px);
+  }
+  
+  .details-grid h4 {
+    color: var(--accent-color);
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+  
+  .details-grid p {
+    margin: 0.5rem 0;
+    color: var(--secondary-text);
+    line-height: 1.5;
+  }
+  
+  /* Status-specific styling */
+  [data-status="In Transit"] {
+    --status-bg: var(--status-in-transit-bg);
+    --status-border: var(--status-in-transit-text);
+    --status-text: var(--status-in-transit-text);
+  }
+  
+  [data-status="Delayed"] {
+    --status-bg: var(--status-delayed-bg);
+    --status-border: var(--status-delayed-text);
+    --status-text: var(--status-delayed-text);
+  }
+  
+  [data-status="Delivered"] {
+    --status-bg: var(--status-delivered-bg);
+    --status-border: var(--status-delivered-text);
+    --status-text: var(--status-delivered-text);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .shipment-details {
+      padding: 1rem;
+    }
+  
+    .details-grid {
+      gap: 1rem;
+    }
+  
+    .status-card {
+      padding: 1rem;
+    }
+  
+    .status-card h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .shipment-details h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Not found message */
+  .shipment-details > div:not(.status-card):not(.details-grid) {
+    text-align: center;
+    padding: 2rem;
+    color: var(--secondary-text);
+    font-size: 1.2rem;
+  }

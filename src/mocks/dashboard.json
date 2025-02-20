@@ -1,0 +1,34 @@
+{
+    "stats": {
+      "totalShipments": 42,
+      "inTransit": 28,
+      "delayed": 5,
+      "delivered": 9,
+      "avgDeliveryTime": "2.5 days",
+      "onTimePercentage": 89
+    },
+    "recentActivity": [
+      {
+        "shipmentId": "SHIP-12345",
+        "update": "Departed Chicago facility",
+        "timestamp": "2024-02-16T14:45:00Z"
+      },
+      {
+        "shipmentId": "SHIP-67890",
+        "update": "Customs clearance delayed",
+        "timestamp": "2024-02-16T14:30:00Z"
+      }
+    ],
+    "carrierPerformance": [
+      {
+        "carrier": "UPS",
+        "onTimeRate": 92,
+        "volume": 18
+      },
+      {
+        "carrier": "FedEx",
+        "onTimeRate": 88,
+        "volume": 12
+      }
+    ]
+  }
