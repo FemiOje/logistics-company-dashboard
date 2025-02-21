@@ -10,8 +10,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navLinks = [
     { path: '/', label: 'Dashboard' },
     { path: '/shipments', label: 'Shipments' },
-    { path: '/tracking', label: 'Tracking' },
-    { path: '/reports', label: 'Reports' },
     { path: '/settings', label: 'Settings' },
   ];
 

@@ -65,19 +65,38 @@ body {
   margin: 1rem 0;
 }
 
-[data-status="in_transit"] {
-  color: var(--primary);
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.status.in_transit {
+  background-color: var(--status-in-transit-bg);
+  color: var(--status-in-transit-text);
   border: 1px solid var(--primary);
 }
 
-[data-status="delayed"] {
-  color: var(--warning);
+.status.delayed {
+  background-color: var(--status-delayed-bg);
+  color: var(--status-delayed-text);
   border: 1px solid var(--warning);
 }
 
-[data-status="delivered"] {
-  color: var(--success);
+.status.delivered {
+  background-color: var(--status-delivered-bg);
+  color: var(--status-delivered-text);
   border: 1px solid var(--success);
+}
+
+@keyframes status-update {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.status-updating {
+  animation: status-update 0.5s ease;
 }
 
 .stats-grid,
