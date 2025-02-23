@@ -2,7 +2,7 @@
     "shipments": [
       {
         "shipmentId": "SHIP-12345",
-        "status": "In Transit",
+        "status": "in transit",
         "origin": {
           "name": "Warehouse A",
           "address": "123 Main St, Chicago, IL",
@@ -26,7 +26,7 @@
       },
       {
         "shipmentId": "SHIP-67890",
-        "status": "Delayed",
+        "status": "delayed",
         "origin": {
           "name": "Factory C",
           "address": "789 Industrial Park, Detroit, MI",
@@ -50,7 +50,7 @@
       },
       {
         "shipmentId": "SHIP-11223",
-        "status": "Delivered",
+        "status": "delivered",
         "origin": {
           "name": "Warehouse B",
           "address": "654 Elm St, Phoenix, AZ",

@@ -15,14 +15,19 @@ export type Shipment = {
     lastUpdated: string,
 };
 
+export type ThemeContextType = {
+    isDark: boolean;
+    toggleTheme: () => void;
+};
+
 export type WebSocketMessage = {
-    type: 'STATUS_UPDATE';
+    type: 'SHIPMENT_UPDATE' | 'CONNECTION_ACK';
     data: StatusUpdateData;
 };
 
 export type WebSocketContextType = {
-    subscribe: (callback: (msg: WebSocketMessage) => void) => void;
-    unsubscribe: (callback: (msg: WebSocketMessage) => void) => void;
+    connect: () => WebSocket;
+    isConnected: boolean;
 };
 
 export interface DashboardStats {
@@ -43,5 +48,5 @@ export interface RecentUpdate {
     shipmentId: string;
     update: string;
     timestamp: string;
-    type: 'STATUS_UPDATE';
+    type: 'SHIPMENT_UPDATE';
 }
