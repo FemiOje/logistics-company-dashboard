@@ -1,21 +1,3 @@
-export const dashboardData = {
-  stats: {
-    totalShipments: 42,
-    inTransit: 28,
-    delayed: 5,
-    delivered: 9
-  },
-  recentUpdates: [
-    {
-      id: "1",
-      shipmentId: "SHIP-12345",
-      update: "Departed Chicago facility",
-      timestamp: new Date().toISOString(),
-      type: "LOCATION_UPDATE"
-    }
-  ]
-};
-
 export const shipments = [
   {
     id: "SHIP-12345",
@@ -40,14 +22,6 @@ export const trackingUpdates = [
     lng: -104.9903
   }
 ];
-
-export const reportsData = {
-  monthly: {
-    labels: ["Jan", "Feb", "Mar"],
-    shipments: [45, 52, 48],
-    revenue: [125000, 142000, 138000]
-  }
-};
 
 export const initialSettings = {
   theme: "light",

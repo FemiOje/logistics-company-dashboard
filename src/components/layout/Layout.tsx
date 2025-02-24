@@ -10,7 +10,6 @@ const Layout: React.FC = () => {
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
-    console.log("Sidebar open? ", isSidebarOpen);
   };
 
   return (

@@ -2,7 +2,7 @@
     "shipments": [
       {
         "shipmentId": "SHIP-12345",
-        "status": "in transit",
+        "status": "in_transit",
         "origin": {
           "name": "Warehouse A",
           "address": "123 Main St, Chicago, IL",

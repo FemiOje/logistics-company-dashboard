@@ -1,45 +1,46 @@
-import { useState } from 'react';
-import { DashboardStats, RecentUpdate } from '../types/types';
+import { useWebSocketData } from '../hooks/useWebSocketData';
 import '../styles/Dashboard.css';
+import { DashboardStats } from '../types/types';
 
 const Dashboard = () => {
-  const [stats ] = useState<DashboardStats>({
+  const initialStats: DashboardStats = {
     totalShipments: 0,
     in_transit: 0,
     delayed: 0,
-    delivered: 0
-  });
-  
-  const [recentUpdates ] = useState<RecentUpdate[]>([]);
+    delivered: 0,
+    shipments: []
+  };
+
+  const { data: stats, isConnected } = useWebSocketData<DashboardStats>(initialStats);
 
   return (
     <div className="dashboard">
       <h1>Dashboard</h1>
-      <div className="stats-grid">
-        {Object.entries(stats).map(([key, value]) => (
-          <div key={key} className="stat-card">
-            <h3>{value}</h3>
-            <p>{key.replace(/_/g, ' ')}</p>
+      {isConnected ? (
+        <div className="stats-grid">
+          <div className="stat-card">
+            <h3>Total Shipments</h3>
+            <p>{stats.totalShipments}</p>
           </div>
-        ))}
-      </div>
-      
-      <div className="recent-updates">
-        <h2>Recent Updates</h2>
-        {recentUpdates.map(update => (
-          <div key={update.id} className="update-card">
-            <div className="update-header">
-              <span className={`status ${update.type.toLowerCase()}`}>
-                {update.type}
-              </span>
-              <span className="update-time">
-                {new Date(update.timestamp).toLocaleTimeString()}
-              </span>
-            </div>
-            <p>{update.shipmentId} - {update.update}</p>
+          
+          <div className="stat-card">
+            <h3>In Transit</h3>
+            <p>{stats.in_transit}</p>
           </div>
-        ))}
-      </div>
+          
+          <div className="stat-card">
+            <h3>Delayed</h3>
+            <p>{stats.delayed}</p>
+          </div>
+          
+          <div className="stat-card">
+            <h3>Delivered</h3>
+            <p>{stats.delivered}</p>
+          </div>
+        </div>
+      ) : (
+        <div>Connecting to server...</div>
+      )}
     </div>
   );
 };
