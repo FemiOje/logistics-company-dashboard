@@ -1,4 +1,5 @@
 import { useTheme } from '../hooks/useTheme';
+import ThemeSwitch from '../components/layout/ThemeSwitch';
 
 const Settings = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -8,9 +9,7 @@ const Settings = () => {
       <h1>Settings</h1>
       <div className="setting-item">
         <label>Dark Mode</label>
-        <button onClick={toggleTheme}>
-          {isDark ? 'Disable' : 'Enable'}
-        </button>
+        <ThemeSwitch isDark={isDark} onToggle={toggleTheme} />
       </div>
     </div>
   );

@@ -17,7 +17,6 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
       </button>
       <h1>Logistics Dashboard</h1>
       <div className="header-right">
-        <span>User Profile</span>
         <ThemeSwitch isDark={isDark} onToggle={toggleTheme} />
       </div>
     </header>
