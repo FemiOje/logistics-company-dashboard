@@ -66,19 +66,19 @@
   }
   
   /* Status-specific styling */
-  [data-status="In Transit"] {
+  [data-status="in_transit"] {
     --status-bg: var(--status-in-transit-bg);
     --status-border: var(--status-in-transit-text);
     --status-text: var(--status-in-transit-text);
   }
   
-  [data-status="Delayed"] {
+  [data-status="delayed"] {
     --status-bg: var(--status-delayed-bg);
     --status-border: var(--status-delayed-text);
     --status-text: var(--status-delayed-text);
   }
   
-  [data-status="Delivered"] {
+  [data-status="delivered"] {
     --status-bg: var(--status-delivered-bg);
     --status-border: var(--status-delivered-text);
     --status-text: var(--status-delivered-text);
