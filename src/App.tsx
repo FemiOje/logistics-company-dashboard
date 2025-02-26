@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { WebSocketProvider } from './providers/WebSocketProvider';
 import Layout from './components/layout/Layout.tsx';
 import { ThemeProvider } from './providers/ThemeProvider.tsx';
@@ -44,7 +44,6 @@ function App() {
   return (
     <ThemeProvider>
       <WebSocketProvider>
-        <BrowserRouter>
           <ErrorBoundary>
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
@@ -59,7 +58,6 @@ function App() {
               </Routes>
             </Suspense>
           </ErrorBoundary>
-        </BrowserRouter>
       </WebSocketProvider>
     </ThemeProvider>
   );
